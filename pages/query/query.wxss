@@ -1,0 +1,68 @@
+.picker {
+    padding: 13px;
+    background-color: #FFFFFF;
+}
+
+.size {
+    font-size: 10px;
+}
+
+.task {
+    margin-top: 25px;
+    font-size: 18px;
+    text-align: center;
+    color: #4E4F97;
+}
+
+.under {
+    margin-top: 20px;
+}
+
+/* 已经连接时候的底色 */
+.badgegreen {
+    background-color: #90EE90;
+
+}
+
+.center {
+    text-align: center;
+    margin: 5px;
+}
+
+.end {
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+.button_item {
+    /* width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2px 20px;
+    background: white; */
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+}
+
+/* 主要通过这里去除botton默认样式 */
+.button {
+    width: 100%;
+    background: white;
+    border: none;
+    /* text-align: left; */
+    padding: 6px 0px;
+    margin: 0px;
+    line-height: 1.5;
+}
+
+/* 主要通过这里去除botton边框 */
+.button::after {
+    border: none;
+}
+
+/* 用button伪装获取formid */
+.form_item {
+    width: 100%;
+}

@@ -1,0 +1,49 @@
+<view class="container">
+  <view class="section">
+    <view class="section__title">校区选择:</view>
+    <picker bindchange="schoolChange" value="{{schoolIndex}}" range="{{schoolArr}}">
+      <view class="picker">
+        <button class="size">{{schoolArr[schoolIndex]}}</button>
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="section__title">区域选择:</view>
+    <picker bindchange="areaChange" value="{{areaIndex}}" range="{{areaArr}}">
+      <view class="picker">
+        <button class="size">{{areaArr[areaIndex]}}</button>
+
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="section__title">桩位选择:</view>
+    <picker bindchange="locationChange" value="{{locationIndex}}" range="{{locationArr}}">
+      <view class="picker">
+        <button class="size">{{locationArr[locationIndex]}}</button>
+      </view>
+    </picker>
+  </view>
+
+  <view class="center" wx:for="{{chargeList}}" wx:key="index">
+    <text>充电桩位:{{index + 1}}</text>
+    <block wx:if="{{item.status === 'U'}}">
+      <mp-badge class="badge" content="使用中" />
+    </block>
+    <block wx:if="{{item.status === 'F'}}">
+      <mp-badge extClass="badgegreen" class="badge" content="空闲中" />
+    </block>
+  </view>
+
+  <view class='button_item center under'>
+      <form class="form_item" bindsubmit='submitTask' report-submit='true' data-type="1">
+        <button class="button" form-type='submit'>
+          <text class="task">关注当前桩位</text>
+        </button>
+      </form>
+      <view class='right_arrow' />
+    </view>
+  <view class="end">
+    <text class="end" bindtap="show">Created by KRG ©2021</text>
+  </view>
+</view>
