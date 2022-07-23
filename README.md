@@ -30,5 +30,5 @@
 提供充电桩编号接口查询服务:
 https://www.mirrormoon.top:7901/aff/charge/list
 
-#### 工大战役每日打卡 & 一键请假
+#### 工大战役每日自动化打卡 & 一键请假
 https://www.mirrormoon.top:7913/#/dk
